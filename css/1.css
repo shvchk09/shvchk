@@ -1,0 +1,309 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 960px;
+
+
+}
+body {
+  background-color: #1c1c1c;
+  height: 100%;
+
+}
+.otstup {
+  height: 20px;
+  width: auto;
+  background-color: #000;
+
+}
+.ftext {
+  margin: 5px;
+}
+hr {
+  height: 1px;
+  width: auto;
+  background: #ff0000;
+border: none;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+font-weight: 300;
+}
+.header {
+  height: auto;
+  width: auto;
+  display: flex;
+  background-color: black;
+  text-align: center;
+  line-height: 1.4;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.tel{
+  color: #fff;
+}
+/* Левая часть */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+
+}
+
+.cont {
+  margin: 5px;
+}
+.header-bottom {
+  margin-bottom: 30px;
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+
+}
+.knop {
+
+  border-color: #fff;
+
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  border: none;
+  color: #000;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+
+}
+.knop:hover {
+  background-color: #ff0000;
+
+
+
+
+}
+.header-right {
+  display: flex;
+  flex-direction: column; /* кнопки сверху, текст снизу */
+  align-items: center;
+    /* всё по центру */
+  gap: 6px;
+  margin: 0;              /* расстояние между кнопками и текстом */
+}
+
+.obe-btn {
+  display: flex;
+  margin-left: 15px;
+  gap: 12px;              /* расстояние между кнопками */
+}
+
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+
+.logo {
+  width: 140px;
+  height: auto;
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.intro {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;         /* вертикальное выравнивание */
+  justify-content: center;
+  gap: 0px;
+  padding: 0px;
+  background-color: #fff;
+  flex-direction: column;
+
+}
+
+.pdd {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.dog {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
+  .vz {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+.icon {
+  width: auto;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.icon-2 {
+  width: auto;
+  height: 45px;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+.icon-text {
+  font-size: 16px;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+.svz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #000;
+
+}
+.icon-3 {
+  width: auto;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-top: 0;
+
+}
+
+.block img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.buttons-text {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  .block {
+    flex: 1 1 100%; /* 1 блок в ряд */
+    max-width: 100%;
+  }
+}
+
+.blocks {
+  max-width: 960px;
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;       /* чтобы блоки переносились на новую строку */
+  gap: 20px;             /* расстояние между блоками */
+  justify-content: center; /* центруем блоки по горизонтали */
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+
+.block {
+  flex: 1 1 45%;
+  max-width: 45%;
+  text-align: center;
+  border: 0px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  min-width: 280px;
+
+  opacity: 0;                 /* скрываем блок */
+  transform: translateY(20px); /* смещаем вниз */
+  transition: all 0.6s ease;  /* плавность */
+}
+
+/* Класс появления */
+.block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.block img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.block video {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  margin-top: 36px;
+  margin-bottom: 37px;
+
+}
+
+.top-text {
+  font-weight: 500;
+  margin-bottom: 0px;
+  color: #fff;
+}
+
+.bottom-text {
+  margin-top: 0px;
+  color: #ff0000;
+  font-weight: 300;
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 600px) {
+  .block {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+}
